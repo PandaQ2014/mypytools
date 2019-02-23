@@ -20,7 +20,7 @@ Meistertask桌面应用壁纸修改工具
 }
 ```
 path为Meistertask应用缓存路径，不同平台路径不同
-threshold为自动判断主壁纸和模糊壁纸的阈值，单位为Kb，（一般主壁纸大于100Kb，模糊壁纸小于100Kb）
+threshold为自动判断主壁纸和模糊壁纸的阈值，单位为Kb，（一般主壁纸大于100KB，模糊壁纸小于100KB）
 wallpaper为待替换的主壁纸相对路径
 wallpaperBlur为待替换的模糊壁纸相对路径
 #### 3.关闭Meistertask应用
