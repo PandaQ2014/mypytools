@@ -8,6 +8,8 @@ def setwallpapermain():
     config = json.loads(configfile.read())
     cachepath = config['path']
     threshold = config['threshold']
+    wallpaperPath = config['wallpaper']
+    wallpaperBlurPath = config['wallpaperBlur']
     print (cachepath)
     datafiles = os.listdir(cachepath)
     for datafile in datafiles:
@@ -15,9 +17,9 @@ def setwallpapermain():
         if not os.path.isdir(temppath):
             if(isWallpaper(temppath)):
                 if(isWallpaperBlur(temppath,threshold)):
-                   replaceWallpaperBlur(temppath)
+                   replaceWallpaperBlur(temppath,wallpaperBlurPath)
                 else:
-                    replaceWallpaper(temppath)
+                    replaceWallpaper(temppath,wallpaperPath)
                     
 
 def isWallpaperBlur(filepath,th):
@@ -28,12 +30,12 @@ def isWallpaperBlur(filepath,th):
     else:
         return False
 
-def replaceWallpaperBlur(filepath):
+def replaceWallpaperBlur(filepath,wallpaperBlurPath):
     size = os.path.getsize(filepath)
-    newsize = os.path.getsize('./config/wb.jpg')
+    newsize = os.path.getsize(wallpaperBlurPath)
     os.remove(filepath)
     newfile = open(filepath,'xb')
-    sourcefile = open('./config/wb.jpg','rb')
+    sourcefile = open(wallpaperBlurPath,'rb')
     if(newsize < size):
         buf = sourcefile.read(newsize)
         newfile.write(buf)
@@ -51,12 +53,12 @@ def getStr(length):
         temp = temp + 'A'
     return temp
 
-def replaceWallpaper(filepath):
+def replaceWallpaper(filepath,wallpaperPath):
     size = os.path.getsize(filepath)
-    newsize = os.path.getsize('./config/w.jpg')
+    newsize = os.path.getsize(wallpaperPath)
     os.remove(filepath)
     newfile = open(filepath,'xb')
-    sourcefile = open('./config/w.jpg','rb')
+    sourcefile = open(wallpaperPath,'rb')
     if(newsize < size):
         buf = sourcefile.read(newsize)
         newfile.write(buf)
