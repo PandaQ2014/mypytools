@@ -77,7 +77,7 @@ def isWallpaper(filepath):
         print(err)
         return False
     w , h = img.size
-    if(w==1920 and h==1280):
+    if(w>=1800 or h>=1000):
         return True
     else:
         return False
