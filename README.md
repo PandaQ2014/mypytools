@@ -3,7 +3,9 @@
 
 ## Contents
 -[Meistertask桌面应用壁纸修改工具](##mtbgconfig)
+
 -[北邮研究生选课捡漏工具2019](##checkoutLessonAvailable)
+
 ## mtbgconfig
 Meistertask桌面应用壁纸修改工具
 ### 使用方法
@@ -30,7 +32,7 @@ wallpaperBlur为待替换的模糊壁纸相对路径
 python版本为python3
 #### 5.重启应用
 
-##checkoutLessonAvailable
+## checkoutLessonAvailable
 选课捡漏工具【没选到课不用愁，捡漏工具显身手，嗯】
 适用于北邮研究生选课系统2019
 有课微信提醒
